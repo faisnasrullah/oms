@@ -1,0 +1,11 @@
+# Copyright (c) 2023, Fais Nasrullah and contributors
+# For license information, please see license.txt
+
+import frappe
+from frappe.model.document import Document
+
+
+class MasterCustomer(Document):
+    def validate(self):
+        if self.is_new():
+            self.membership = "Bronze"

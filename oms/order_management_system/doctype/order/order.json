@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-05-31 16:41:05.393173",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "order_date",
+  "customer",
+  "customer_name",
+  "column_break_o4ub2",
+  "payment_status",
+  "membership",
+  "section_break_qsdey",
+  "shipping_info",
+  "section_break_yojid",
+  "order_items",
+  "section_break_uerz4",
+  "subtotal",
+  "column_break_qiiyj",
+  "total_diskon",
+  "total_harga",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Master Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "order_date",
+   "fieldtype": "Date",
+   "label": "Order Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "payment_status",
+   "fieldtype": "Read Only",
+   "label": "Payment Status"
+  },
+  {
+   "fieldname": "order_items",
+   "fieldtype": "Table",
+   "label": "Order Items",
+   "options": "Product Line"
+  },
+  {
+   "fieldname": "subtotal",
+   "fieldtype": "Currency",
+   "label": "Subtotal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Order",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_o4ub2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_yojid",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qiiyj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_uerz4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "customer.membership",
+   "fieldname": "membership",
+   "fieldtype": "Read Only",
+   "label": "Membership"
+  },
+  {
+   "fieldname": "section_break_qsdey",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "shipping_info",
+   "fieldtype": "Table",
+   "label": "Shipping Info",
+   "options": "Shipping Info"
+  },
+  {
+   "fieldname": "total_diskon",
+   "fieldtype": "Currency",
+   "label": "Total Diskon",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_harga",
+   "fieldtype": "Currency",
+   "label": "Total Harga",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-01 18:20:14.282081",
+ "modified_by": "Administrator",
+ "module": "Order Management System",
+ "name": "Order",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

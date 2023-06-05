@@ -1,0 +1,88 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "naming_series:",
+    "creation": "2023-05-31 20:51:33.136697",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "naming_series",
+        "customer_name",
+        "membership",
+        "shipping_address",
+        "column_break_jxx39",
+        "contact_info",
+        "billing_address",
+        "order_amount"
+    ],
+    "fields": [
+        {
+            "fieldname": "naming_series",
+            "fieldtype": "Data",
+            "hidden": 1,
+            "label": "Naming Series"
+        },
+        {
+            "fieldname": "customer_name",
+            "fieldtype": "Data",
+            "label": "Customer Name"
+        },
+        {
+            "fieldname": "membership",
+            "fieldtype": "Link",
+            "label": "Membership",
+            "options": "Master Membership"
+        },
+        {
+            "fieldname": "shipping_address",
+            "fieldtype": "Small Text",
+            "label": "Shipping Address"
+        },
+        {
+            "fieldname": "column_break_jxx39",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "contact_info",
+            "fieldtype": "Int",
+            "label": "Contact Info"
+        },
+        {
+            "fieldname": "billing_address",
+            "fieldtype": "Small Text",
+            "label": "Billing Address"
+        },
+        {
+            "default": "0",
+            "fieldname": "order_amount",
+            "fieldtype": "Data",
+            "label": "Order Amount",
+            "read_only": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2023-06-01 15:32:41.426566",
+    "modified_by": "Administrator",
+    "module": "Order Management System",
+    "name": "Master Customer",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "search_fields": "customer_name, membership",
+    "sort_field": "modified",
+    "sort_order": "DESC"
+}
